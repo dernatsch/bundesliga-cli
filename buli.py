@@ -44,7 +44,7 @@ def main():
         description="Show Bundesliga scores on the command line."
     )
 
-    parser.add_argument("--goals", dest="goals", action="store_true",
+    parser.add_argument("-g,--goals", dest="goals", action="store_true",
             help="print the goals of each game")
     args = parser.parse_args()
 
