@@ -7,11 +7,23 @@ import json
 from datetime import datetime
 
 def print_goals(goals):
+    score = (0,0)
+
     for goal in goals:
         t = goal["MatchMinute"]
         scorer = goal["GoalGetterName"]
+        newscore = (goal["ScoreTeam1"],goal["ScoreTeam2"])
 
-        print(f"                    {t}' {scorer}")
+        if newscore[0] > score[0]:
+            # team 1 scored, print on left
+            print(f"{scorer:>19} {t}'")
+        elif newscore[1] > score[1]:
+            print(f"                    {t}' {scorer}")
+        else:
+            pass # this should never happen
+
+        score = newscore
+
 
     print()
 
