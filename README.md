@@ -1,13 +1,5 @@
 # bundesliga-cli: Show Bundesliga results on the command line
 
-## Installing
-
-To install run:
-
-```sh
-pip3 install bundesliga-cli
-```
-
 ## Running
 
 The command
